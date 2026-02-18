@@ -332,7 +332,7 @@ public class MainApp extends Application {
             AnchorPane page = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Generational Statistics");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
+//            dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
 
