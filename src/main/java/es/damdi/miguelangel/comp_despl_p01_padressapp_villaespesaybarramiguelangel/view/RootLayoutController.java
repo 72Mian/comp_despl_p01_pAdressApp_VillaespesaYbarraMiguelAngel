@@ -259,6 +259,11 @@ public class RootLayoutController {
         mainApp.showBirthdayStatisticsPie();
     }
 
+    @FXML
+    private void handleShowDonutStatistics() {
+        mainApp.showDonutStatistics();
+    }
+
 
 
 

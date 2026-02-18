@@ -349,6 +349,28 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+    public void showDonutStatistics() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/DonutCharStatistics.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Donut Statistics (TilesFX)");
+            dialogStage.initOwner(primaryStage);
+            dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/images/icono.png")));
+
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+
+            DonutCharStatisticsController controller = loader.getController();
+            controller.setPersonData(personData);
+
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);

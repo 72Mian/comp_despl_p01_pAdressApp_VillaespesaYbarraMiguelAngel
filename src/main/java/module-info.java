@@ -6,6 +6,10 @@ module es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelang
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.datatype.jsr310;
     requires java.prefs;
+    requires java.desktop;
+    requires eu.hansolo.tilesfx;
+    requires javafx.swing;
+
     opens es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelangel.model;
     opens es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelangel.persistence;
     opens es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelangel.util;

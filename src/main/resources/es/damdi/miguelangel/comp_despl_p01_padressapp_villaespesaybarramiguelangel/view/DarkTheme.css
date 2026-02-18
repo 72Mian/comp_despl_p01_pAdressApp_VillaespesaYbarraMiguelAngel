@@ -148,3 +148,49 @@
 .button:default:hover {
     -fx-background-color: derive(-fx-focus-color,30%);
 }
+/* Fondo general del área del gráfico */
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent; /* O usa #1d1d1d si quieres forzarlo */
+}
+
+/* Fondo del área de trazado (donde se dibujan las líneas/barras/sectores) */
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+/* Color del texto del título y leyenda */
+.chart-title, .chart-legend {
+    -fx-text-fill: white;
+    -fx-font-size: 1.2em;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #d8d8d8;
+}
+
+/* Ejes (X e Y) - Color de las líneas y etiquetas */
+.axis {
+    -fx-tick-label-fill: #d8d8d8; /* Color de los números/meses */
+    -fx-font-size: 0.9em;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.axis:top {
+    -fx-border-color: transparent transparent #d8d8d8 transparent;
+}
+.axis:right {
+    -fx-border-color: transparent transparent transparent #d8d8d8;
+}
+.axis:bottom {
+    -fx-border-color: #d8d8d8 transparent transparent transparent;
+}
+.axis:left {
+    -fx-border-color: transparent #d8d8d8 transparent transparent;
+}
+
+/* Color de las líneas de cuadrícula (grid) y marcas (ticks) */
+.axis-tick-mark, .axis-minor-tick-mark {
+    -fx-stroke: #d8d8d8;
+}
+

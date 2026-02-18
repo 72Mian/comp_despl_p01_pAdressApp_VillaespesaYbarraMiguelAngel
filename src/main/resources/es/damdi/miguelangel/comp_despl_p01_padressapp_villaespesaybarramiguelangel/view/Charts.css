@@ -1,0 +1,120 @@
+/* ==================================================================
+ * CHARTS.CSS
+ * Estilos específicos para PieChart y LineChart (Tema Oscuro)
+ * ================================================================== */
+
+/* --- CONFIGURACIÓN GENERAL DEL GRÁFICO --- */
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent; /* Fondo transparente para ver el color de la ventana */
+}
+
+.chart-content {
+    -fx-padding: 10px;
+}
+
+/* Título del gráfico */
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 1.6em;
+    -fx-font-family: "Segoe UI Light";
+}
+
+/* Fondo donde se dibujan las líneas/barras */
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+/* --- LEYENDA (LEGEND) --- */
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #d8d8d8; /* Color del texto de la leyenda */
+    -fx-font-size: 0.9em;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 50%; /* Hace los iconos de la leyenda redondos */
+}
+
+/* --- EJES (AXIS) - Para LineChart y BarChart --- */
+.axis {
+    -fx-tick-label-fill: #b2b2b2; /* Color de los números/texto en los ejes */
+    -fx-font-size: 0.85em;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.axis-label {
+    -fx-text-fill: #d5ac81; /* Color del nombre del eje (si lo tienes) */
+}
+
+/* Color de las líneas de los ejes y las marcas (ticks) */
+.axis-tick-mark, .axis-minor-tick-mark {
+    -fx-stroke: #808080;
+}
+
+/* Líneas horizontales/verticales de fondo (grid) */
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: #444444; /* Gris muy oscuro sutil */
+    -fx-stroke-dash-array: 2 5; /* Línea discontinua */
+}
+
+/* ==================================================================
+ * ESTILOS ESPECÍFICOS PARA PIE CHART
+ * ================================================================== */
+
+/* Texto de las etiquetas conectadas al "quesito" */
+.chart-pie-label {
+    -fx-fill: #d8d8d8;
+    -fx-font-size: 0.9em;
+}
+
+/* La línea que une el texto con el sector */
+.chart-pie-label-line {
+    -fx-stroke: #808080;
+}
+
+/* Colores personalizados para los sectores */
+.default-color0.chart-pie { -fx-pie-color: #d5ac81; } /* Tu color dorado */
+.default-color1.chart-pie { -fx-pie-color: #5d98bc; } /* Azul apagado */
+.default-color2.chart-pie { -fx-pie-color: #bc5d5d; } /* Rojo apagado */
+.default-color3.chart-pie { -fx-pie-color: #7cbc5d; } /* Verde apagado */
+.default-color4.chart-pie { -fx-pie-color: #9d5dbc; } /* Violeta apagado */
+
+/* Efecto Hover: Resaltar sector al pasar el ratón */
+.chart-pie:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+/* ==================================================================
+ * ESTILOS ESPECÍFICOS PARA LINE CHART
+ * ================================================================== */
+
+/* La línea principal del gráfico */
+.chart-series-line {
+    -fx-stroke: #d5ac81; /* Tu color dorado */
+    -fx-stroke-width: 2.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Los puntos (símbolos) en la línea */
+.chart-line-symbol {
+    -fx-background-color: #d5ac81, #1d1d1d; /* Borde dorado, centro oscuro */
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+}
+
+/* Efecto al pasar el ratón por un punto */
+.chart-line-symbol:hover {
+    -fx-background-color: white; /* Se vuelve blanco brillante */
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+    -fx-cursor: hand;
+}
