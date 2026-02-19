@@ -19,7 +19,7 @@ public class PDFHelpViewer extends Application {
         Scene scene = new Scene(displayer.toNode());
 
         // Obtener la URL del PDF
-        URL pdfUrl = getClass().getResource("help/pdf/ayuda.pdf");
+        URL pdfUrl = getClass().getResource("/help/pdf/ayuda.pdf");
 
         if (pdfUrl == null) {
             System.err.println("⚠️ El archivo PDF no se encontró en el classpath.");

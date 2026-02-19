@@ -43,7 +43,7 @@ public class MarkdownHelp extends Application {
      * @return Contenido del archivo Markdown como String, o un mensaje de error si ocurre un problema.
      */
     private String loadMarkdown() {
-        try (InputStream inputStream = getClass().getResourceAsStream("help/markdown/README.md")) {
+        try (InputStream inputStream = getClass().getResourceAsStream("/help/markdown/README.md")) {
             if (inputStream == null) {
                 System.err.println("⚠️ El archivo Markdown no se encontró dentro del JAR.");
                 return "Error: No se pudo encontrar el archivo Markdown.";
