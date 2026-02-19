@@ -9,6 +9,9 @@ module es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelang
     requires java.desktop;
     requires eu.hansolo.tilesfx;
     requires javafx.swing;
+    requires flexmark;
+    requires flexmark.util.ast;
+    requires PDFViewerFX;
 
     opens es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelangel.model;
     opens es.damdi.miguelangel.comp_despl_p01_padressapp_villaespesaybarramiguelangel.persistence;

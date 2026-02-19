@@ -49,11 +49,14 @@
                 <MenuItem mnemonicParsing="false" onAction="#handleShowDonutStatistics" text="Donut Statistics" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help" />
+                </items>
+            </Menu>
         </menus>
          <styleClass>
             <String fx:value="lbl-info" />
