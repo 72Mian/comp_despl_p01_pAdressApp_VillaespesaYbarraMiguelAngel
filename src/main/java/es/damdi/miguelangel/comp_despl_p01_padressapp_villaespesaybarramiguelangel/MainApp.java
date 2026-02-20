@@ -24,6 +24,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
+/**
+ * The type Main app.
+ */
 public class MainApp extends Application {
 
     private Stage primaryStage;
@@ -44,27 +47,56 @@ public class MainApp extends Application {
      * El estado de cambios sin guardar (dirty)
      */
     private boolean dirty;
+
+    /**
+     * Gets repository.
+     *
+     * @return the repository
+     */
     public PersonRepository getRepository() {
         return repository;
     }
 
+    /**
+     * Is dirty boolean.
+     *
+     * @return the boolean
+     */
     public boolean isDirty() {
         return dirty;
     }
 
+    /**
+     * Sets dirty.
+     *
+     * @param dirty the dirty
+     */
     public void setDirty(boolean dirty) {
         this.dirty = dirty;
     }
 
+    /**
+     * Gets person file path.
+     *
+     * @return the person file path
+     */
     public File getPersonFilePath() {
         return personFilePath;
     }
 
 
+    /**
+     * Sets person data.
+     *
+     * @param personData the person data
+     */
     public void setPersonData(ObservableList<Person> personData) {
         this.personData = personData;
     }
 
+    /**
+     * Instantiates a new Main app.
+     */
     public MainApp() {
         // Add some sample data
         personData.add(new Person("Hans", "Muster"));
@@ -78,9 +110,11 @@ public class MainApp extends Application {
         personData.add(new Person("Martin", "Mueller"));
         personData.add(new Person("Miguel Ángel", "Villaespesa"));
     }
+
     /**
      * Returns the data as an observable list of Persons.
-     * @return
+     *
+     * @return the person data
      */
     public ObservableList<Person> getPersonData() {
         return personData;
@@ -143,6 +177,7 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
     /**
      * Opens a dialog to edit details for the specified person. If the user
      * clicks OK, the changes are saved into the provided person object and true
@@ -185,7 +220,8 @@ public class MainApp extends Application {
 
     /**
      * Returns the main stage.
-     * @return
+     *
+     * @return the primary stage
      */
     public Stage getPrimaryStage() {
         return primaryStage;
@@ -193,6 +229,8 @@ public class MainApp extends Application {
 
     /**
      * Conecta el fichero actual con preferencias
+     *
+     * @param file the file
      */
     public void setPersonFilePath(File file) {
         this.personFilePath = file;
@@ -206,6 +244,9 @@ public class MainApp extends Application {
 
     /**
      * Implementa loadPersonDataFromJson(File file)
+     *
+     * @param file the file
+     * @throws IOException the io exception
      */
     public void loadPersonDataFromJson(File file) throws IOException {
         // 1) Cargar desde repositorio
@@ -221,6 +262,9 @@ public class MainApp extends Application {
 
     /**
      * Implementa savePersonDataToJson(File file)
+     *
+     * @param file the file
+     * @throws IOException the io exception
      */
     public void savePersonDataToJson(File file) throws IOException {
         // 1) Guardar con el repositorio
@@ -271,6 +315,7 @@ public class MainApp extends Application {
     }
     private final Path defaultJsonPath =
             Paths.get(System.getProperty("user.home"), ".addressappv2", "persons.json");
+
     /**
      * Opens a dialog to show birthday statistics.
      */
@@ -299,6 +344,10 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Show birthday statistics line.
+     */
     public void showBirthdayStatisticsLine() {
         try {
             // Load the fxml file and create a new stage for the popup.
@@ -324,6 +373,10 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Show birthday statistics pie.
+     */
     public void showBirthdayStatisticsPie() {
         try {
             // Load the fxml file and create a new stage for the popup.
@@ -349,6 +402,10 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Show donut statistics.
+     */
     public void showDonutStatistics() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -372,6 +429,11 @@ public class MainApp extends Application {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

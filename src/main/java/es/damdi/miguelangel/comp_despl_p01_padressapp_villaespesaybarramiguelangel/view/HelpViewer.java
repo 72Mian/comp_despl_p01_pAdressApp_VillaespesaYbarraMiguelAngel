@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
+/**
+ * The type Help viewer.
+ */
 public class HelpViewer extends Application {
 
     @Override
@@ -31,6 +34,11 @@ public class HelpViewer extends Application {
         primaryStage.show();
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

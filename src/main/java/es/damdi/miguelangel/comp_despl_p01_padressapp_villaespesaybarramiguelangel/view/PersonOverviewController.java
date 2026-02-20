@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 
+/**
+ * The type Person overview controller.
+ */
 public class PersonOverviewController {
     @FXML
     private TableView<Person> personTable;
@@ -98,7 +101,7 @@ public class PersonOverviewController {
     /**
      * Is called by the main application to give a reference back to itself.
      *
-     * @param mainApp
+     * @param mainApp the main app
      */
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;

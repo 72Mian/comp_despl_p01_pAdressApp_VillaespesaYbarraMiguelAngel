@@ -4,9 +4,35 @@
   <groupId>es.damdi.miguelangel</groupId>
   <artifactId>comp_despl_p01_pAdressApp_VillaespesaYbarraMiguelAngel</artifactId>
   <name>comp_despl_p01_pAdressApp_VillaespesaYbarraMiguelAngel</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0-RELEASE</version>
+  <description>Aplicación de direcciones en JavaFX con Maven</description>
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.12.0</version>
+          <configuration>
+            <release>${maven.compiler.release}</release>
+            <additionalOptions>
+              <additionalOption>--show-packages</additionalOption>
+              <adittionalOption>all</adittionalOption>
+            </additionalOptions>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.21.0</version>
+        <configuration>
+          <locales>es,fr</locales>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.6.1</version>
@@ -61,7 +87,23 @@
       <url>https://jitpack.io</url>
     </repository>
   </repositories>
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.12.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+          <additionalOptions>
+            <additionalOption>--show-packages</additionalOption>
+            <additionalOption>all</additionalOption>
+          </additionalOptions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
   <properties>
+    <maven.compiler.release>25</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.12.1</junit.version>
   </properties>

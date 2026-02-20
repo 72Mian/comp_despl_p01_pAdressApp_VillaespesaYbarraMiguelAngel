@@ -12,6 +12,9 @@ import java.util.List;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * The type Csv person repository.
+ */
 public class CsvPersonRepository {
 
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -19,6 +22,13 @@ public class CsvPersonRepository {
 
     private static final String DELIMITER = ";";
 
+    /**
+     * Export data.
+     *
+     * @param file       the file
+     * @param personList the person list
+     * @throws IOException the io exception
+     */
     public void exportData(File file, List<Person> personList) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8))) {
 
@@ -48,6 +58,13 @@ public class CsvPersonRepository {
         }
     }
 
+    /**
+     * Import data list.
+     *
+     * @param file the file
+     * @return the list
+     * @throws IOException the io exception
+     */
     public List<Person> importData(File file) throws IOException {
         List<Person> importedPersons = new ArrayList<>();
 

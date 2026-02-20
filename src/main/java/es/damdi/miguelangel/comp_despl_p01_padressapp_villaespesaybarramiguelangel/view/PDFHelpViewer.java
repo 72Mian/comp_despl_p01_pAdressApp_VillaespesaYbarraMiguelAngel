@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+/**
+ * The type Pdf help viewer.
+ */
 public class PDFHelpViewer extends Application {
     @Override
     public void start(Stage primaryStage) {
@@ -41,6 +44,11 @@ public class PDFHelpViewer extends Application {
         primaryStage.show();
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

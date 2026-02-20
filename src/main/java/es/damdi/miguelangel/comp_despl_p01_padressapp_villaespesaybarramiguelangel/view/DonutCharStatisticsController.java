@@ -11,6 +11,9 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Donut char statistics controller.
+ */
 public class DonutCharStatisticsController {
 
     @FXML
@@ -34,6 +37,11 @@ public class DonutCharStatisticsController {
         }
     }
 
+    /**
+     * Sets person data.
+     *
+     * @param persons the persons
+     */
     public void setPersonData(ObservableList<Person> persons) {
         this.personData = persons;
         updateChart();

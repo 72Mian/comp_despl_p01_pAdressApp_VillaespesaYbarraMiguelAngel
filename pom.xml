@@ -6,12 +6,14 @@
 
     <groupId>es.damdi.miguelangel</groupId>
     <artifactId>comp_despl_p01_pAdressApp_VillaespesaYbarraMiguelAngel</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
     <name>comp_despl_p01_pAdressApp_VillaespesaYbarraMiguelAngel</name>
+    <description>Aplicación de direcciones en JavaFX con Maven</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.12.1</junit.version>
+        <maven.compiler.release>25</maven.compiler.release>
     </properties>
 
     <repositories>
@@ -115,7 +117,36 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.12.0</version>
+                    <configuration>
+                        <!-- Para JDK 9+ mejor "release" -->
+                        <release>${maven.compiler.release}</release>
+                        <additionalOptions>
+                            <additionalOption>--show-packages</additionalOption>
+                            <adittionalOption>all</adittionalOption>
+                        </additionalOptions>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
+                <configuration>
+                    <locales>es,fr</locales>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -169,4 +200,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

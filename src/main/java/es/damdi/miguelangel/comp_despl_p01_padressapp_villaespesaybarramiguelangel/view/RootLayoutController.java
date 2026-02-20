@@ -14,9 +14,18 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * The type Root layout controller.
+ */
 public class RootLayoutController {
     private CsvPersonRepository csvRepository = new CsvPersonRepository();
     private MainApp mainApp;
+
+    /**
+     * Sets main app.
+     *
+     * @param mainApp the main app
+     */
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
@@ -171,13 +180,20 @@ public class RootLayoutController {
     //-------CSV-------
 
 
-    // Método para crear/configurar el menú (llámalo en tu initialize o método main)
+    /**
+     * Sets menu handlers.
+     */
+// Método para crear/configurar el menú (llámalo en tu initialize o método main)
     public void setupMenuHandlers() {
         // Si usas FXML, vincula estos métodos a los MenuItem con onAction="#handleExport"
         // Si lo haces por código:
         // exportItem.setOnAction(event -> handleExport());
         // importItem.setOnAction(event -> handleImport());
     }
+
+    /**
+     * Handle export.
+     */
     @FXML
     public void handleExport() {
         FileChooser fileChooser = new FileChooser();
@@ -214,6 +230,10 @@ public class RootLayoutController {
             }
         }
     }
+
+    /**
+     * Handle import.
+     */
     @FXML
     public void handleImport() {
         FileChooser fileChooser = new FileChooser();

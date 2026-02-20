@@ -17,6 +17,9 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 
+/**
+ * The type Line char statistics controller.
+ */
 public class LineCharStatisticsController {
 
 
@@ -38,6 +41,11 @@ public class LineCharStatisticsController {
         xAxisLine.setCategories(monthNames);
     }
 
+    /**
+     * Sets person data.
+     *
+     * @param persons the persons
+     */
     public void setPersonData(List<Person> persons) {
         // 1. Contar nacimientos por mes
         int[] monthCounter = new int[12];

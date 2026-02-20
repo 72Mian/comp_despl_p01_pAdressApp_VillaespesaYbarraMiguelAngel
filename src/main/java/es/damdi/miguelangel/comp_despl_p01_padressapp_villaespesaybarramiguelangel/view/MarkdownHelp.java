@@ -14,6 +14,9 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 
+/**
+ * The type Markdown help.
+ */
 public class MarkdownHelp extends Application {
 
     @Override
@@ -55,6 +58,11 @@ public class MarkdownHelp extends Application {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
