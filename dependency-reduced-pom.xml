@@ -16,7 +16,7 @@
             <release>${maven.compiler.release}</release>
             <additionalOptions>
               <additionalOption>--show-packages</additionalOption>
-              <adittionalOption>all</adittionalOption>
+              <additionalOption>all</additionalOption>
             </additionalOptions>
           </configuration>
         </plugin>

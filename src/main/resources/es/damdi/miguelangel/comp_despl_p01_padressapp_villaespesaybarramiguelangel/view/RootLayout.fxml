@@ -51,10 +51,18 @@
           </Menu>
             <Menu mnemonicParsing="false" text="Help">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                    <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help" />
-                    <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help" />
-                    <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpHtml" text="HTML Help">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="H" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpMarkdown" text="Markdown Help">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#handleHelpPdf" text="PDF Help">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
                 </items>
             </Menu>
         </menus>
